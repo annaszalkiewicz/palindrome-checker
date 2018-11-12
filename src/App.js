@@ -9,6 +9,9 @@ class App extends Component {
           <h1>Palindrome Checker</h1>
         </header>
         <Main />
+        <footer className="footer">
+          <p>Written and coded by <a href="https://mywebgraphicdesign.com" target="_blank" rel="noopener noreferrer">Anna Szalkiewicz</a></p>
+        </footer>
       </div>
     );
   }
