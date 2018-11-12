@@ -20,11 +20,20 @@ code {
 
 /* HEADER */
 
+.App-header {
+  border-bottom: solid 3px #000;
+  padding: 1em;
+}
+
 .App-header h1 {
   text-align: center;
+  font-family: 'Poiret One', cursive;
   font-size: 1.5em;
-  padding: 1em;
-  border-bottom: solid 3px #000;
+}
+
+.App-header h2 {
+  text-align: center;
+  font-size: 1em;
 }
 
 /* FOOTER */
