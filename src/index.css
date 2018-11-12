@@ -26,3 +26,12 @@ code {
   padding: 1em;
   border-bottom: solid 3px #000;
 }
+
+/* FOOTER */
+
+.footer p {
+  text-align: center;
+  font-size: 1em;
+  padding: 1em;
+  border-top: solid 1px #000;
+}
