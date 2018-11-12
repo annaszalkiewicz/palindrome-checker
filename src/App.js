@@ -6,7 +6,8 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <h1>Palindrome Checker</h1>
+          <h1>Is it palindrome?</h1>
+          <h2>Palindrome Checker</h2>
         </header>
         <Main />
         <footer className="footer">
