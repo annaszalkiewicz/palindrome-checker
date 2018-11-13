@@ -48,6 +48,32 @@ code {
   padding: 1em;
 }
 
+/* FORM */
+
+label {
+  text-align: center;
+  display: block;
+  font-weight: bold;
+}
+input {
+  display: block;
+  width: 90%;
+  margin: 1em auto;
+  padding: 1em;
+  border-radius: 5px;
+  border: solid 1px #000;
+}
+button {
+  display: block;
+  margin: 1em auto;
+  padding: 1em;
+  border: solid 1px #000;
+  border-radius: 5px;
+  background: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1em;
+  font-weight: bold;
+}
 /* FOOTER */
 
 .footer p {
