@@ -36,6 +36,18 @@ code {
   font-size: 1em;
 }
 
+/* DESCRIPTION */
+
+.description {
+  text-align: center;
+}
+.description h2 {
+  padding: 1em;
+}
+.description p {
+  padding: 1em;
+}
+
 /* FOOTER */
 
 .footer p {
