@@ -5,10 +5,18 @@ class Form extends Component {
   constructor(props) {
     super(props);
     this.state = {
-
+      value: ''
     }
-    this.checkIfPalindrome = this.checkIfPalindrome.bind(this);
 
+    this.checkIfPalindrome = this.checkIfPalindrome.bind(this);
+    this.handleChange = this.handleChange.bind(this);
+
+  }
+
+  handleChange = (e) => {
+    console.log('Value changed');
+    this.setState({ value: e.target.value })
+    
   }
   
   checkIfPalindrome = (e) => {
@@ -18,11 +26,14 @@ class Form extends Component {
   }
 
   render() {
+
+    const { value } = this.state;
+
     return (
       <section>
-        <form onSubmit={e => this.checkIfPalindrome(e)}>
+        <form onSubmit={this.checkIfPalindrome}>
           <label htmlFor="text">Type word, number or phrase</label>
-          <input type="text" name="text" id="text"/>
+          <input type="text" name="text" id="text" value={value} onChange={this.handleChange} />
           <button type="submit">Check for Palindrome</button>
         </form>
       </section>
