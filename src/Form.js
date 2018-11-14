@@ -5,7 +5,9 @@ class Form extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: ''
+      value: '',
+      string: '',
+      array: [],
     }
 
     this.checkIfPalindrome = this.checkIfPalindrome.bind(this);
@@ -22,7 +24,16 @@ class Form extends Component {
   checkIfPalindrome = (e) => {
     e.preventDefault();
     console.log('Submitted form');
-    
+
+    const { value } = this.state;
+    let string = value.replace(/[^A-Za-z0-9]/g, '').toLowerCase();
+
+    this.setState({ string: string });
+
+    let arr1 = string.split('');
+
+    this.setState({ array: arr1 });
+
   }
 
   render() {
