@@ -8,6 +8,7 @@ class Form extends Component {
       value: '',
       string: '',
       array: [],
+      reversed: []
     }
 
     this.checkIfPalindrome = this.checkIfPalindrome.bind(this);
@@ -33,6 +34,10 @@ class Form extends Component {
     let arr1 = string.split('');
 
     this.setState({ array: arr1 });
+
+    let reversed = arr1.reverse();
+
+    this.setState({ reversed: reversed });
 
   }
 
