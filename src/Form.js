@@ -7,11 +7,10 @@ class Form extends Component {
     this.state = {
       value: '',
       string: '',
-      array: [],
-      reversed: []
+      reversed: '',
     }
 
-    this.checkIfPalindrome = this.checkIfPalindrome.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
 
   }
@@ -19,39 +18,40 @@ class Form extends Component {
   handleChange = (e) => {
     console.log('Value changed');
     this.setState({ value: e.target.value })
-    
   }
-  
-  checkIfPalindrome = (e) => {
+
+  handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Submitted form');
 
     const { value } = this.state;
     let string = value.replace(/[^A-Za-z0-9]/g, '').toLowerCase();
 
     this.setState({ string: string });
 
-    let arr1 = string.split('');
-
-    this.setState({ array: arr1 });
-
-    let reversed = arr1.reverse();
+    let reversed = string.split('').reverse().join('');
 
     this.setState({ reversed: reversed });
-
   }
 
   render() {
 
-    const { value } = this.state;
+    const { value, string, reversed } = this.state;
 
     return (
       <section>
-        <form onSubmit={this.checkIfPalindrome}>
+        <form onSubmit={this.handleSubmit}>
           <label htmlFor="text">Type word, number or phrase</label>
           <input type="text" name="text" id="text" value={value} onChange={this.handleChange} />
           <button type="submit">Check for Palindrome</button>
         </form>
+        {string === reversed && (
+          <p>It's palindrome!</p>
+        )}
+
+        {string !== reversed && (
+          <p>It's not palindrome :(</p>
+        )}
+
       </section>
     )
   }
