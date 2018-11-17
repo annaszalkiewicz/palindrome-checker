@@ -6,6 +6,7 @@
   margin-block-start: 0;
   margin-block-end: 0;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 body {
   font-family: 'Montserrat', sans-serif;
@@ -73,6 +74,25 @@ button {
   font-family: 'Montserrat', sans-serif;
   font-size: 1em;
   font-weight: bold;
+}
+.palindrome {
+  text-align: center;
+  font-family: 'Poiret One', cursive;
+  font-weight: bold;
+  font-size: 2em;
+  padding: 1em 1em 2em 1em;
+  animation-name: palindrome;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+}
+
+@keyframes palindrome {
+  0% {
+    transform: translateX(5000px);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 /* FOOTER */
 

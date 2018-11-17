@@ -44,11 +44,11 @@ class Form extends Component {
           <button type="submit">Check for Palindrome</button>
         </form>
         {string === reversed && (
-          <p>It's palindrome!</p>
+          <p className="palindrome">It's palindrome!</p>
         )}
 
         {string !== reversed && (
-          <p>It's not palindrome :(</p>
+          <p className="palindrome">It's not palindrome :(</p>
         )}
 
       </section>
