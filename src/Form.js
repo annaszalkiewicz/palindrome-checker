@@ -16,7 +16,6 @@ class Form extends Component {
   }
 
   handleChange = (e) => {
-    console.log('Value changed');
     this.setState({ value: e.target.value })
   }
 
@@ -40,7 +39,7 @@ class Form extends Component {
     return (
       <section>
         <form onSubmit={this.handleSubmit}>
-          <label htmlFor="text">Type word, number or phrase</label>
+          <label htmlFor="text">Type word, number or phrase and click "Enter"</label>
           <input type="text" name="text" id="text" value={value} onChange={this.handleChange} />
           <button type="submit">Check for Palindrome</button>
         </form>
