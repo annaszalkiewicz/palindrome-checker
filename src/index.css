@@ -25,7 +25,7 @@ code {
 
 .App-header {
   border-bottom: solid 3px #000;
-  padding: 1em;
+  padding: 2em;
 }
 
 .App-header h1 {
@@ -45,7 +45,7 @@ code {
   text-align: center;
 }
 .description h2 {
-  padding: 1em;
+  padding: 2em 1em 1em 1em;
 }
 .description p {
   padding: 1em;
