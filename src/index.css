@@ -53,6 +53,9 @@ code {
 
 /* FORM */
 
+form {
+  padding: 2em 1em 1em 1em;
+}
 label {
   text-align: center;
   display: block;
@@ -61,20 +64,20 @@ label {
 input {
   display: block;
   width: 90%;
-  margin: 1em auto;
+  margin: 2em auto;
   padding: 1em;
   border-radius: 5px;
   border: solid 1px #000;
 }
 button {
   display: block;
-  margin: 1em auto;
+  margin: 2em auto 1em auto;
   padding: 1em;
   border: solid 1px #000;
   border-radius: 5px;
   background: none;
   font-family: 'Montserrat', sans-serif;
-  font-size: 1em;
+  font-size: 1.2em;
   font-weight: bold;
 }
 .palindrome {
@@ -101,6 +104,6 @@ button {
 .footer p {
   text-align: center;
   font-size: 1em;
-  padding: 1em;
+  padding: 2em 1em;
   border-top: solid 1px #000;
 }
