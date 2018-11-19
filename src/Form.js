@@ -39,7 +39,7 @@ class Form extends Component {
     return (
       <section>
         <form onSubmit={this.handleSubmit}>
-          <label htmlFor="text">Type word, number or phrase and click "Enter"</label>
+          <label htmlFor="text">Type word, number or phrase and click button. No-letters characters (except numbers) and any space will be ignored when checking for palindrome.</label>
           <input type="text" name="text" id="text" value={value} onChange={this.handleChange} />
           <button type="submit">Check for Palindrome</button>
         </form>
