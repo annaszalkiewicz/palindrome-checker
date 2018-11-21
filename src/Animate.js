@@ -7,11 +7,19 @@ class Animate extends Component {
     this.state = {
       words: []
     }
+    this.createPhrase = this.createPhrase.bind(this);
+  }
+
+  componentDidMount = () => {
+
+    this.createPhrase();
+
   }
 
   createPhrase = () => {
 
     const array = ['anna', 'madam', '10201', 'Was it a cat I saw?', 'Do geese see God?', 'Race fast, safe car', 'Able was I ere I saw Elba', 'Rats live on no evil star', 'A man a plan a Canal Panama' ];
+
   }
   
 
