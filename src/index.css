@@ -111,3 +111,12 @@ button {
   padding: 2em 1em;
   border-top: solid 1px #000;
 }
+
+/* ANIMATION */
+
+.animation {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -100;
+}
