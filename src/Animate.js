@@ -34,10 +34,13 @@ class Animate extends Component {
 
     const { palindrome } = this.state;
 
+    const color = ['#9e2021', '#155f60', '#6c943e', '#1e7f3f'];
+
     const style = {
       fontSize: Math.floor((Math.random() * 70) + 20) + 'px',
       left: Math.floor((Math.random() * 70) + 0) + '%',
       top: Math.floor((Math.random() * 90) + 0) + '%',
+      color: color[Math.floor(Math.random() * color.length)],
     }
 
     return (
