@@ -5,47 +5,38 @@ class Animate extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      words: []
+      palindromes: ['anna', 'madam', '10201', 'Was it a cat I saw?', 'Do geese see God?', 'Race fast, safe car', 'Able was I ere I saw Elba', 'Rats live on no evil star', 'A man a plan a Canal Panama' ]
     }
-    // this.createPhrase = this.createPhrase.bind(this);
-    // this.getRandom = this.getRandom.bind(this);
+    this.repeat = this.repeat.bind(this);
+    this.create = this.create.bind(this);
   }
 
-  // componentDidMount = () => {
+  componentDidMount = () => {
 
-  //   this.getRandom();
+    this.repeat();
 
-  // }
+  }
 
-  // createPhrase = () => {
+  repeat = () => {
+    window.setInterval(this.create, 5000);
+  }
 
-  //   const array = ['anna', 'madam', '10201', 'Was it a cat I saw?', 'Do geese see God?', 'Race fast, safe car', 'Able was I ere I saw Elba', 'Rats live on no evil star', 'A man a plan a Canal Panama' ];
+  create = () => {
 
-  //     let random = Math.floor(Math.random * array.length);
+    let randomPalindrome = this.state.palindromes[Math.floor(Math.random() * this.state.palindromes.length)]
 
-  //     this.setState({ words: random });
+    this.setState({ palindrome: randomPalindrome });
 
-  // }
-
-  // getRandom = () => {
-
-  //   setInterval(this.createPhrase(), 3000)
-  // }
-  
+  }
 
   render() {
+
+    const { palindrome } = this.state;
+
     return (
       
       <div className="animation">
-        <span className="phrase">anna</span>
-        <span className="phrase">madam</span>
-        <span className="phrase">10201</span>
-        <span className="phrase">Was it a cat I saw?</span>
-        <span className="phrase">Do geese see God?</span>
-        <span className="phrase">Race fast, safe car</span>
-        <span className="phrase">Able was I ere I saw Elba</span>
-        <span className="phrase">Rats live on no evil star</span>
-        <span className="phrase">A man a plan a Canal Panama</span>
+        <span className="animation-palindrome">{palindrome}</span>
       </div>
     )
   }
