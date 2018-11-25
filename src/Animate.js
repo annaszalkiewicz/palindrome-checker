@@ -5,7 +5,8 @@ class Animate extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      palindromes: ['anna', 'madam', '10201', 'Was it a cat I saw?', 'Do geese see God?', 'Race fast, safe car', 'Able was I ere I saw Elba', 'Rats live on no evil star', 'A man a plan a Canal Panama' ]
+      palindromes: ['anna', 'madam', '10201', 'Was it a cat I saw?', 'Do geese see God?', 'Race fast, safe car', 'Able was I ere I saw Elba', 'Rats live on no evil star', 'A man a plan a Canal Panama' ],
+      palindrome: ''
     }
     this.repeat = this.repeat.bind(this);
     this.create = this.create.bind(this);
@@ -33,10 +34,16 @@ class Animate extends Component {
 
     const { palindrome } = this.state;
 
+    const style = {
+      fontSize: Math.floor((Math.random() * 70) + 20) + 'px',
+      left: Math.floor((Math.random() * 70) + 0) + '%',
+      top: Math.floor((Math.random() * 90) + 0) + '%',
+    }
+
     return (
       
       <div className="animation">
-        <span className="animation-palindrome">{palindrome}</span>
+        <span className="animation-palindrome" style={style}>{palindrome}</span>
       </div>
     )
   }

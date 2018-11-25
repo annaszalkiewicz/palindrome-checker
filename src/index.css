@@ -120,3 +120,6 @@ button {
   position: absolute;
   z-index: -100;
 }
+.animation-palindrome {
+  position: absolute;
+}
