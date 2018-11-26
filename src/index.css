@@ -139,3 +139,25 @@ button {
 .animation-palindrome {
   position: absolute;
 }
+
+@media screen and (min-width: 600px) and (orientation: portrait) {
+  .html, body {
+    font-size: 16px;
+  }
+  .App-header {
+    position: absolute;
+    width: 100%;
+  }
+  main {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+  }
+  .footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    box-shadow: 0 -5px 20px #aaa;
+  }
+}
