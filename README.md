@@ -1,44 +1,65 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Is it palindrome? - Palindrome Checker
+---
+## Project Overview
 
-## Available Scripts
+This project is part of JavaScript Algorithms and Data Structures Certification by FreeCodeCamp. It's single page application that check if given input is palindrome. 
 
-In the project directory, you can run:
+This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
-### `npm start`
+## How to run project?
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Run on local machine
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+1. Clone repository to local machine using
+```
+$ git clone https://github.com/annaszalkiewicz/palindrome-checker
+```
 
-### `npm test`
+2. Install all dependencies
+```
+$ npm install
+```
+3. Run application
+```
+$ npm start
+```
+visit the site: `http://localhost:3000`
+You can change port by editing `package.json` file. In line 19 `"start": "react-scripts start",` add `set PORT=3000 && ` before `react-scripts start` and change port number 3000 to any other. Save file.
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Live preview
 
-### `npm run build`
+[https://mywebgraphicdesign.com/palindrome-checker](https://mywebgraphicdesign.com/palindrome-checker)
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Offline usage
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+This project use service workers and cache its content. Set up your favorite HTTP server so that a visitor to your site is served index.html, and requests to static paths like /static/js/main.<hash>.js are served with the contents of the /static/js/main.<hash>.js file. Service worker runs only on production `build` directory. If you would like to test it on your local machine, please follow this guide: 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Make sure you have installed [Node](https://nodejs.org/).
 
-### `npm run eject`
+2. Create `build` folder
+```
+$ npm run build
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+3. Install [Serve](https://github.com/zeit/serve).
+```
+$ npm install -g serve
+```
+4. Serve your static site on the port 5000. 
+```
+$ serve -s build
+```
+Like many of serve’s internal settings, the port can be adjusted using the `-p` or `--port` flags.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+5. Open project on local server `localhost:5000`
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Dependencies
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+* [React](https://reactjs.org/)
+* [React DOM](https://www.npmjs.com/package/react-dom)
+* [Font Montserrat on Google](https://fonts.google.com/specimen/Montserrat)
+* [Font Poiret One on Google](https://fonts.google.com/specimen/Poiret+One)
 
-## Learn More
+## Contributions
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+As this project is part of JavaScript Algorithms and Data Structures Certification no contribution will be accepted.
